@@ -23,16 +23,16 @@
                         <p><strong><a href="{{ line.product.get_absolute_url }}">{{ line.description }}</a></strong></p>
                     </div>
                     <div class="col-sm-1 align-center"><strong>{% trans "Qty" %}</strong> {{ line.quantity }}</div>
-                    <div class="col-sm-3 price_color align-right">{{ line.unit_price_excl_tax|currency:request.basket.currency }}</div>
+                    <div class="col-sm-3 price_color align-right">{{ line.unit_price_excl_tax|currency:"€" }}</div>
                 </div>
             </li>
         {% endfor %}
         <li class="form-group form-actions">
             <p class="align-right">
                 {% if request.basket.is_tax_known %}
-                    <small>{% trans "Total:" %} {{ request.basket.total_incl_tax|currency:request.basket.currency }}</small> 
+                    <small>{% trans "Total:" %} {{ request.basket.total_incl_tax|currency:"€" }}</small>
                 {% else %}
-                    <small>{% trans "Total:" %} {{ request.basket.total_excl_tax|currency:request.basket.currency }}</small> 
+                    <small>{% trans "Total:" %} {{ request.basket.total_excl_tax|currency:"€" }}</small>
                 {% endif %}
             </p>
             <a href="{% url 'basket:summary' %}" class="btn btn-info btn-sm">{% trans "View basket" %}</a>

@@ -24,7 +24,7 @@ class AbstractTransaction(models.Model):
 
     For example:
     * A 'pre-auth' with a bankcard gateway
-    * A 'settle' with a credit provider (see django-oscar-accounts)
+    * A 'settle' with a credit provider (see JUS-accounts)
     """
     source = models.ForeignKey(
         'payment.Source',

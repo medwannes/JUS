@@ -40,9 +40,9 @@ class TestDashboardIndexForStaffUser(WebTestCase):
         self.assertEqual(report['max_revenue'], 0)
 
     def test_includes_hourly_report_with_orders(self):
-        create_order(total=prices.Price('GBP', excl_tax=D('34.05'),
+        create_order(total=prices.Price('EUR', excl_tax=D('34.05'),
                                         tax=D('0.00')))
-        create_order(total=prices.Price('GBP', excl_tax=D('21.90'),
+        create_order(total=prices.Price('EUR', excl_tax=D('21.90'),
                                         tax=D('0.00')))
         report = IndexView().get_hourly_report()
 

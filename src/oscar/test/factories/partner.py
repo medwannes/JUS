@@ -28,7 +28,7 @@ class PartnerFactory(factory.DjangoModelFactory):
 class StockRecordFactory(factory.DjangoModelFactory):
     partner = factory.SubFactory(PartnerFactory)
     partner_sku = factory.Sequence(lambda n: 'unit%d' % n)
-    price_currency = "GBP"
+    price_currency = "EUR"
     price_excl_tax = D('9.99')
     num_in_stock = 100
 

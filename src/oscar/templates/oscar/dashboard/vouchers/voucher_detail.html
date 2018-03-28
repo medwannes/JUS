@@ -70,8 +70,8 @@
                     {% with order=discount.order %}
                         <tr>
                             <td><a href="{% url "dashboard:order-detail" number=order.number %}">{{ order.number }}</a></td>
-                            <td>{{ order.total_incl_tax|currency:order.currency }}</td>
-                            <td>{{ discount.amount|currency:order.currency }}</td>
+                            <td>{{ order.total_incl_tax|currency:"€" }}</td>
+                            <td>{{ discount.amount|currency:"€" }}</td>
                             <td>{{ order.date_placed }}</td>
                         </tr>
                     {% endwith %}

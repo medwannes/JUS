@@ -74,9 +74,9 @@ with open(os.path.join(PROJECT_DIR, 'README.rst')) as fh:
         '^.. start-no-pypi.*^.. end-no-pypi', '', fh.read(), flags=re.M | re.S)
 
 setup(
-    name='django-oscar',
+    name='JUS',
     version=get_version().replace(' ', '-'),
-    url='https://github.com/django-oscar/django-oscar',
+    url='https://github.com/JUS/JUS',
     author="David Winterbottom",
     author_email="david.winterbottom@gmail.com",
     description="A domain-driven e-commerce framework for Django",
@@ -113,9 +113,9 @@ setup(
 
 # Show contributing instructions if being installed in 'develop' mode
 if len(sys.argv) > 1 and sys.argv[1] == 'develop':
-    docs_url = 'https://django-oscar.readthedocs.io/en/latest/internals/contributing/index.html'
-    mailing_list = 'django-oscar@googlegroups.com'
-    mailing_list_url = 'https://groups.google.com/forum/?fromgroups#!forum/django-oscar'
+    docs_url = 'https://JUS.readthedocs.io/en/latest/internals/contributing/index.html'
+    mailing_list = 'JUS@googlegroups.com'
+    mailing_list_url = 'https://groups.google.com/forum/?fromgroups#!forum/JUS'
     twitter_url = 'https://twitter.com/django_oscar'
     msg = (
         "You're installing Oscar in 'develop' mode so I presume you're thinking\n"

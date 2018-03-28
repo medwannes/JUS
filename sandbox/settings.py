@@ -53,7 +53,7 @@ CACHES = {
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
 USE_TZ = True
-TIME_ZONE = 'Europe/London'
+TIME_ZONE = 'Europe/Paris'
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
@@ -127,11 +127,19 @@ TEMPLATES = [
         'DIRS': [
             location('templates'),
             oscar.OSCAR_MAIN_TEMPLATE_DIR,
+
+
+
+
         ],
         'OPTIONS': {
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
                 'django.template.loaders.app_directories.Loader',
+                'django.template.loaders.eggs.Loader',
+
+
+
             ],
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
@@ -258,7 +266,8 @@ LOGGING = {
         },
     }
 }
-
+#from paypal.standard.models import
+#from paypal.standard.ipn.signals import
 
 INSTALLED_APPS = [
     'django.contrib.auth',
@@ -276,6 +285,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'apps.gateway',     # For allowing dashboard access
     'widget_tweaks',
+    'paypal',
 ] + oscar.get_core_apps()
 
 # Add Oscar's custom auth backend so users can sign in using their email
@@ -340,7 +350,7 @@ from oscar.defaults import *
 # Meta
 # ====
 
-OSCAR_SHOP_TAGLINE = 'Sandbox'
+OSCAR_SHOP_TAGLINE = 'Grenade'
 
 OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
 OSCAR_ALLOW_ANON_CHECKOUT = True
@@ -415,3 +425,6 @@ try:
     from settings_local import *
 except ImportError:
     pass
+PAYPAL_API_USERNAME = 'test_xxxx.gmail.com'
+PAYPAL_API_PASSWORD = '123456789'
+PAYPAL_API_SIGNATURE = '...'

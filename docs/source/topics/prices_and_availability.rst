@@ -47,7 +47,7 @@ calculating prices and availability information.
    >>> info.price.tax
    Decimal('3.60')
    >>> info.price.currency
-   'GBP'
+   'EUR'
 
 The product model captures the core data about the product (title, description,
 images) while a stockrecord represents fulfillment information for one

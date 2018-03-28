@@ -347,7 +347,7 @@ Currency settings
 ``OSCAR_DEFAULT_CURRENCY``
 --------------------------
 
-Default: ``GBP``
+Default: ``EUR``
 
 This should be the symbol of the currency you wish Oscar to use by default.
 This will be used by the currency templatetag.

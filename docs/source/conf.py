@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# django-oscar documentation build configuration file, created by
+# JUS documentation build configuration file, created by
 # sphinx-quickstart on Mon Feb  7 13:16:33 2011.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -61,7 +61,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'django-oscar'
+project = u'JUS'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -107,7 +107,7 @@ pygments_style = 'sphinx'
 #modindex_common_prefix = []
 
 # Github repo for sphinx-issues
-issues_github_path = 'django-oscar/django-oscar'
+issues_github_path = 'JUS/JUS'
 
 
 # -- Options for HTML output ---------------------------------------------------
@@ -208,7 +208,7 @@ htmlhelp_basename = 'django-oscardoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'django-oscar.tex', u'django-oscar Documentation',
+  ('index', 'JUS.tex', u'JUS Documentation',
    u'David Winterbottom', 'manual'),
 ]
 
@@ -241,7 +241,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'django-oscar', u'django-oscar Documentation',
+    ('index', 'JUS', u'JUS Documentation',
      [u'David Winterbottom'], 1)
 ]
 
